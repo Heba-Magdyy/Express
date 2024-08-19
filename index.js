@@ -19,3 +19,8 @@ app.post("/" , (req, res) => {
     res.status(201).json({"msg" : "Post Request"})
     console.log(req.body)
 } )
+
+app.put("/:id" , (req , res)=>{
+    console.log(req.params.id)
+    res.status(201).json(req.params.id)
+})
